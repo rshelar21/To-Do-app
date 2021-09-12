@@ -10,12 +10,12 @@ const DB = 'mongodb+srv://jackk:jackOP123@cluster1.ibtrp.mongodb.net/todoitems?r
 
 mongoose.connect(DB, {
     useNewUrlParser: true,
-    useCreateIndex: true,
+    
     useUnifiedTopology: true,
-    useFindModify: false
+   
 }).then(() =>{
-    console.log(`connected`);
-}).catch((err) => console.log(`nott`));
+    console.log(`connecte`);
+}).catch((err) => console.log(err));
 
 
 
