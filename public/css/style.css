@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgba(48, 16, 255, 1) 0%,
+        rgba(100, 115, 255, 1) 100%
+    );
+}
+.container{
+    width: 50vw;
+    height: 50vh;
+    border-radius: 8px;
+    /* background-color: gray; */
+    background: #161a2b;
+    overflow-y: scroll;
+}
+.header{
+    text-align: center;
+    margin: 10px;
+    color: #fff;
+    /* font-size: 20px; */
+}
+form{
+    text-align: center;
+    margin: 10px 5px;
+}
+input{
+    /* width: 80%; */
+    width: 40%;
+    padding: 10px;
+    /* border: none; */
+    color: white;
+    border: 2px solid #5d0cff;
+    background: transparent;
+    outline: none;
+
+}
+
+input[type="text"]{
+    padding: 12px;
+   
+}
+
+input[type="text"]::placeholder{
+    color: #e2e2e2;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+        rgba(155, 0, 250, 1) 100%
+    );
+    color: white;
+}
+.round{
+    position: relative;
+    /* left: -200px; */
+    /* top: 10px; */
+    top: -3px;
+}
+.item p{
+    position: relative;
+    /* top: -20px; */
+    font-size: 18px;
+    display: inline-block;
+    margin: 0px 50px;
+    /* font-family: 'Acme', sans-serif; */
+    font-family: 'Domine', serif;
+    /* color: black; */
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.f2{
+    height: 50px;
+    margin: 10px;
+    background: linear-gradient(
+        90deg,
+        rgba(20, 159, 255, 1) 0%,
+        rgba(17, 122, 255, 1) 100%
+    );
+    border-radius: 5px; 
+    color: #fff;
+}
+/* .round{
+position: relative;
+} */
+.f2:nth-child(2n + 1){
+    background: linear-gradient(
+        90deg,
+        rgba(255, 118, 20, 1) 0%,
+        rgba(255, 84, 17, 1) 100%
+    );  
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 22px;
+  /* left: 10px; */
+  position: absolute;
+  /* top: 0; */
+  width: 22px;
+}
+
+#checkbox{
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.fa-custom{
+    color: black;
+    position: relative;
+    left: 17px;
+    z-index: 9;
+    top: 4px;
+    /* cursor: pointer; */
+}
+
+@media screen and (max-width: 850px) {
+    .container{
+        width: 70vw;
+    }
+    .item p{
+        font-size: 15px;
+    }
+    .header h1{
+        font-size: 2em;
+    }
+    
+
+    
+}
+@media screen and (max-width:1090px) {
+    input{
+        width: 35%;
+        /* height: 20px; */
+    }
+    
+}

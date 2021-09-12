@@ -1,0 +1,35 @@
+<%- include("header") -%>
+<div class="container">
+    <div class="header">
+        <h1>ToDo List</h1>
+    </div>
+    
+    <form action="/" method="post">
+        <label for=""></label>
+        <input type="text" name="n" id="" placeholder="Add a todo">
+        <input type="date" name="date" id="" class="adddate" placeholder="enter date">
+        <button type="submit">ADD</button>
+    </form>
+
+
+    <% newlists.forEach(function(item){ %>
+    <form class="f2" method="post" action="/delete">
+        <div class="item">
+            <div class="round">
+            <input type="checkbox"id="checkbox" value="<%= item._id %>" onChange="this.form.submit()" name="checkbox">
+            <i class="fas fa-times fa-custom"></i>
+           
+            <label for="checkbox"></label>
+             </div>
+            <div class="todotext">
+            <p><%=  item.name%></p>
+            <p><%=  item.date%></p>
+           
+        </div>
+           <br>
+        </div>
+        
+        </form>
+    <% }); %>
+
+    
