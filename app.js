@@ -5,10 +5,18 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 app.use(express.static("public"))
-
-
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/todoitems', {useNewUrlParser: true, useUnifiedTopology: true});
+const DB = 'mongodb+srv://jackk:jackOP123@cluster1.ibtrp.mongodb.net/todoitems?retryWrites=true&w=majority'
+
+mongoose.connect(DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindModify: false
+}).then(() =>{
+    console.log(`connected`);
+}).catch((err) => console.log(`nott`));
+
 
 
 
